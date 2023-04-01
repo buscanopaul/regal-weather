@@ -1,11 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { weatherApi } from "./api";
-import { weatherReducer } from "./weatherSlice";
 
 const rootReducer = combineReducers({
-    [weatherApi.reducerPath]: weatherApi.reducer,
-    weather: weatherReducer
+    [weatherApi.reducerPath]: weatherApi.reducer
 })
 
 const store = configureStore({
